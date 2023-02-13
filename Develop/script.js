@@ -10,44 +10,45 @@ var min= 8;
 var max = 128;
 
 function generatePassword() {
-  let lowerOk = confirm("Lowercase letters?");
+  var lowerOk = confirm("Lowercase letters?");
   if (lowerOk) {
     chars = lowerCase;
   } else {
   }
   
-  let upperOK = confirm("Uppercase letters?");
+  var upperOK = confirm("Uppercase letters?");
   if (upperOK) {
     chars += upperCase;
   } else {
 
   }
 
-  let numbersOK = confirm("Include numbers?");
+  var numbersOK = confirm("Include numbers?");
   if (numbersOK) {
     chars += numbers;
   } else {
 
   }
 
-  let symbolOK = confirm("Special characters?");
+  var symbolOK = confirm("Special characters?");
   if (symbolOK) {
     chars += symbols;
   } 
 
-  let i = prompt("password length?");
+  var i = prompt("password length?");
     if (i > 7 && i < 129) {
       while (i > 0) {
         password += chars[Math.floor(Math.random() * chars.length)];
         i--;
       }
+       return password;
+    }  else {
+      
+      password= "please try again";
       return password;
-    }  
+        }
+   
     
-       else {
-         password = "Please try again.";
-         return password;
-       }
       }
 
 
